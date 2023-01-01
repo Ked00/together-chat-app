@@ -1,0 +1,26 @@
+.text-1 {
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+.text-1::after {
+    content: "";
+    animation: textOne 15s linear infinite;
+}
+
+@keyframes textOne {
+    0% {
+        content: "Friends";
+    }
+
+    50% {
+        content: "Family";
+        text-decoration: none;
+    }
+
+    100% {
+        content: "A Community";
+        color: gold;
+        text-decoration: underline;
+    }
+}
