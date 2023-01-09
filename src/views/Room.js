@@ -2,12 +2,12 @@ import React from "react";
 import {Row, Col} from "react-bootstrap";
 import Peer from "peerjs";
 import {useGetCamera} from "../utility/useGetCamera";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {EndCall} from "../components/EndCall";
 
 export function Room() {
-  const id = window.location.pathname.slice(6); // pulling room id from url
-  const peer = new Peer(id);
+  const id = useParams(); // pulling room id from url
+  const peer = new Peer(id.id); 
   const getMedia = useGetCamera;
   const navigate = useNavigate();
 
