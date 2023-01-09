@@ -1,17 +1,18 @@
 import React from "react";
-import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export function useCheckAuth() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    React.useEffect(() => {
-        axios.get("auth/verify")
-            .then(res => {
-                if (res.data === "not authorized") {
-                    navigate("/login")
-                }
-            })
-            .catch(err => console.log(err))
-    }, [])
+  React.useEffect(() => {
+    axios
+      .get("auth/verify")
+      .then((res) => {
+        if (res.data === "not authorized") {
+          navigate("/login");
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
 }
