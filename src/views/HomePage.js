@@ -3,12 +3,12 @@ import {MainNavbar} from "../components/MainNavbar";
 import {Row, Col} from "react-bootstrap";
 import axios from "axios";
 import io from "socket.io-client";
-import {MessagePage} from "../components/MessagePage";
+import {CommunityGroupChat} from "../components/CommunityGroupChat";
 
 // hooks
 import {useCheckAuth} from "../utility/useCheckAuth";
 
-export function Main() {
+export function HomePage() {
   useCheckAuth();
   const socket = io();
   const [user, setUser] = React.useState({});
@@ -32,7 +32,7 @@ export function Main() {
 
       <Row>
         <Col className="vh-100">
-          <MessagePage />
+          <CommunityGroupChat />
         </Col>
       </Row>
     </div>

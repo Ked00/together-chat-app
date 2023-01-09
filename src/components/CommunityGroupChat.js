@@ -2,7 +2,7 @@ import React from "react";
 import {Button, Col} from "react-bootstrap";
 import {io} from "socket.io-client";
 
-export function MessagePage(props) {
+export function CommunityGroupChat(props) {
   const socket = io();
   const [sendMessage, setSendMessage] = React.useState("");
   const [messageInfo, setMessageInfo] = React.useState([]);
