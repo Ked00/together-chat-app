@@ -1,10 +1,10 @@
 import React from "react";
 import { Offcanvas, Button, Form, Alert } from "react-bootstrap";
-import useToggleState from "../utility/useToggleState";
-import useUpdateinput from "../utility/useUpdateinput";
+import {useToggleState} from "../utility/useToggleState";
+import {useUpdateinput} from "../utility/useUpdateinput";
 import axios from "axios";
 
-export default function Profile(props) {
+export function Profile(props) {
     const [toggle, switchState] = useToggleState(false);
     const [target, changeInput] = useUpdateinput({});
     const [alertMessage, setAlertMessage] = React.useState({ show: false });

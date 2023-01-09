@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function useUpdateinput(obj) {
+export function useUpdateinput(obj) {
     const [target, setTarget] = React.useState(obj)
 
     function changeInput(e) {

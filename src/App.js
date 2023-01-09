@@ -4,14 +4,14 @@ import {
     Route,
 } from "react-router-dom"
 
-import Landing from "./views/Landing";
-import Login from "./views/Login";
-import Signup from "./views/Signup";
-import Main from "./views/Main";
-import Room from "./views/Room";
+import { Landing } from "./views/Landing";
+import { Login } from "./views/Login";
+import { Signup } from "./views/Signup";
+import { Main } from "./views/Main";
+import { Room } from "./views/Room";
 
 
-export default function App() {
+export function App() {
     return (
         <Routes>
             <Route path="/" element={<Landing />} />

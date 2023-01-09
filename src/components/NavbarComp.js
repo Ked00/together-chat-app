@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Navbar } from "react-bootstrap";
-import RedirectButton from "./RedirectButton";
-import TextLogo from "./TextLogo";
+import { RedirectButton } from "./RedirectButton";
+import { TextLogo } from "./TextLogo";
 
-export default function NavbarComp() {
+export function NavbarComp() {
     return (
         <Navbar className="border-bottom border-2"  >
             <Container>

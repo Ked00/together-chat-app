@@ -3,13 +3,13 @@ import { Row, Col, Button, Form, FloatingLabel } from "react-bootstrap";
 import axios from "axios";
 
 // hooks
-import useUpdateinput from "../utility/useUpdateinput";
-import FeedbackAlert from "../components/FeedbackAlert";
+import { useUpdateinput } from "../utility/useUpdateinput";
+import { FeedbackAlert } from "../components/FeedbackAlert";
 
 // components
-import NavbarComp from "../components/NavbarComp";
+import { NavbarComp } from "../components/NavbarComp";
 
-export default function Signup() {
+export function Signup() {
     const [target, changeInput] = useUpdateinput({})
     const [alertSettings, setAlertSettings] = React.useState({
         message: "",

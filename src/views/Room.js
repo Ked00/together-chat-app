@@ -1,11 +1,11 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Peer from "peerjs";
-import useGetCamera from "../utility/useGetCamera";
+import {useGetCamera} from "../utility/useGetCamera";
 import { useNavigate } from "react-router-dom";
-import EndCall from "../components/EndCall";
+import {EndCall} from "../components/EndCall";
 
-export default function Room() {
+export function Room() {
     document.body.style = "background: black";
     const id = window.location.pathname.slice(6) // pulling room id from url 
     const peer = new Peer(id);

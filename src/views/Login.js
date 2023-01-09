@@ -4,13 +4,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 // hooks
-import useUpdateinput from "../utility/useUpdateinput";
+import { useUpdateinput } from "../utility/useUpdateinput";
 
 // components
-import NavbarComp from "../components/NavbarComp";
-import FeedbackAlert from "../components/FeedbackAlert"
+import { NavbarComp } from "../components/NavbarComp";
+import { FeedbackAlert } from "../components/FeedbackAlert"
 
-export default function Login() {
+export function Login() {
     const navigate = useNavigate();
     const [target, changeInput] = useUpdateinput({});
     const [alertSettings, setAlertSettings] = React.useState({

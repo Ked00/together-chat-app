@@ -1,14 +1,14 @@
 import React from "react";
-import MainNavbar from "../components/MainNavbar";
+import {MainNavbar} from "../components/MainNavbar";
 import { Row, Col } from "react-bootstrap";
 import axios from "axios";
 import io from "socket.io-client";
-import MessagePage from "../components/MessagePage";
+import {MessagePage} from "../components/MessagePage";
 
 // hooks
-import useCheckAuth from "../utility/useCheckAuth";
+import {useCheckAuth} from "../utility/useCheckAuth";
 
-export default function Main() {
+export function Main() {
     useCheckAuth();
     const socket = io();
     const [user, setUser] = React.useState({});

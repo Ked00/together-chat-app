@@ -1,19 +1,19 @@
 import React from "react";
 import { Container, Navbar, Spinner } from "react-bootstrap";
-import OneInputModal from "./OneInputModal";
-import TextLogo from "./TextLogo";
+import {OneInputModal} from "./OneInputModal";
+import {TextLogo} from "./TextLogo";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import Peer from "peerjs";
 
-import Profile from "./Profile";
+import {Profile} from "./Profile";
 
 // hooks
-import useUpdateinput from "../utility/useUpdateinput";
-import useGetCamera from "../utility/useGetCamera";
+import {useUpdateinput} from "../utility/useUpdateinput";
+import {useGetCamera} from "../utility/useGetCamera";
 
 
-export default function MainNavbar(props) {
+export function MainNavbar(props) {
     const navigate = useNavigate();
     const peer = new Peer();
     const [target, changeInput] = useUpdateinput({ oneinput: uuidv4() });

@@ -4,7 +4,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import "../stylesheets/index.css";
 
 
-export default function Landing() {
+export function Landing() {
     return (
         <div className="vh-100">
             <Row className="h-75">

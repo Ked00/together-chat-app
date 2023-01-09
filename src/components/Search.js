@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
-import { Form, Button, Accordion, Container } from "react-bootstrap"
+import { Form, Button, Container } from "react-bootstrap"
 
-import useUpdateinput from "../utility/useUpdateinput";
+import { useUpdateinput } from "../utility/useUpdateinput";
 
-export default function Search() {
+export function Search() {
     const [list, setList] = React.useState("");
     const [target, changeInput] = useUpdateinput({});
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TextLogo(props) {
+export function TextLogo(props) {
     return (
         <>
             <a href={props.href} className="text-decoration-none">

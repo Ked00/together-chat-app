@@ -1,11 +1,11 @@
 import React from "react";
 import { Modal, Form, Button } from "react-bootstrap";
-import RedirectButton from "./RedirectButton";
+import {RedirectButton} from "./RedirectButton";
 
 // hooks
-import useToggleState from "../utility/useToggleState";
+import {useToggleState} from "../utility/useToggleState";
 
-export default function OneInputModal(props) {
+export function OneInputModal(props) {
     const [toggle, switchState] = useToggleState(false)
 
     return (
