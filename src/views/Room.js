@@ -6,7 +6,6 @@ import {useNavigate} from "react-router-dom";
 import {EndCall} from "../components/EndCall";
 
 export function Room() {
-  document.body.style = "background: black";
   const id = window.location.pathname.slice(6); // pulling room id from url
   const peer = new Peer(id);
   const getMedia = useGetCamera;
@@ -34,7 +33,7 @@ export function Room() {
 
   return (
     <>
-      <Row className="overflow-hidden">
+      <Row className="overflow-hidden bg-dark">
         <Col>
           <div className="w-100 vh-100 position-relative">
             <video
