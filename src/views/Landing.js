@@ -1,7 +1,6 @@
 import React from "react";
 import {Row, Col, Button} from "react-bootstrap";
-
-import "../stylesheets/index.css";
+import {ChangingText} from "../components/ChangingText";
 
 export function Landing() {
   return (
@@ -10,7 +9,7 @@ export function Landing() {
         <Col>
           <div className="mt-4 h-100 d-flex flex-column justify-content-center align-items-center">
             <h1>Talk to </h1>
-            <span className="rounded p-1 text-1"></span>
+            <ChangingText />
           </div>
         </Col>
       </Row>
