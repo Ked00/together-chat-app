@@ -13,7 +13,7 @@ export function Room() {
     const navigate = useNavigate()
 
     React.useEffect(() => {
-        getMedia()
+        getMedia() //turns on your camera when you access the room page
 
         peer.on("call", async (call) => {
             const userMedia = await getMedia()
