@@ -15,13 +15,13 @@ import {useGetCamera} from "../utility/useGetCamera";
 export function MainNavbar(props) {
   const navigate = useNavigate();
   const peer = new Peer();
-  const [target, changeInput] = useUpdateinput({oneinput: uuidv4()});
+  const [target, changeInput] = useUpdateinput({roomid: uuidv4()});
   const [iWantToCall, setIWantToCall] = React.useState("");
 
   function createRoom() {
     // room id gets set once you are on the rooms page
     // so others can call you
-    navigate(`/room/${target.oneinput}`);
+    navigate(`/room/${target.roomid}`);
   }
 
   function targetFunc(e) {
@@ -52,7 +52,7 @@ export function MainNavbar(props) {
             header="Create"
             label="Your room id:"
             submit="Create room"
-            roomId={target.oneinput}
+            roomId={target.roomid}
             targetFunc={changeInput}
             onClick={createRoom}
           />
